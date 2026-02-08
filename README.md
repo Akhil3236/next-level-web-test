@@ -23,7 +23,11 @@ is enforced on the protected API route.
 
 ![User Data](./screenshots/user-data.png)
 
+
 ### 1. No user logged in (401 Unauthorized)
+
+please foucs on the x-user-id header
+
 When no authentication information is provided, the API returns `401 Unauthorized`.
 
 ![Unauthorized - No User](./screenshots/notuser.png)
@@ -45,6 +49,12 @@ the request succeeds and returns the expected response.
 ![Success - Admin Access](./screenshots/admin.png)
 
 
+
+## For Testing on Your side 
+
+api - https://next-level-web-test.onrender.com
+
+please add x-user-id header in request
 ## Improvements
 With more time, this could be extended using:
 - JWT-based authentication
