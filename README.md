@@ -14,9 +14,36 @@ user's role before allowing access.
 - lib/ - auth and role logic
 - app/api - protected API routes
 
+## API Authorization Scenarios
+
+The following screenshots demonstrate how role-based access control
+is enforced on the protected API route.
+
+### 1. No user logged in (401 Unauthorized)
+When no authentication information is provided, the API returns `401 Unauthorized`.
+
+![Unauthorized - No User](./screenshots/unauthorized-no-user.png)
+
+---
+
+### 2. User logged in without admin role (403 Forbidden)
+When an authenticated user without the required role accesses the endpoint,
+the API returns `403 Forbidden`.
+
+![Forbidden - User Role](./screenshots/forbidden-user-role.png)
+
+---
+
+### 3. Admin user logged in (200 Success)
+When an authenticated admin user accesses the endpoint,
+the request succeeds and returns the expected response.
+
+![Success - Admin Access](./screenshots/success-admin.png)
+
+
 ## Improvements
 With more time, this could be extended using:
 - JWT-based authentication
 - Database-backed users
 - Middleware-based auth checks
-# next-level-web-test
+
